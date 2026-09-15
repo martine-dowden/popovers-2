@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Demo: JS Popover</title>
+  <link href="../global.styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    main {
+      display: block;
+    }
+  </style>
+  <script>
+    function openPop() {
+      console.log('open')
+      const pop = document.getElementById('my-popover')
+      console.log(pop)
+      pop.showPopover()
+      setTimeout(() => {
+        pop.hidePopover()
+      }, 2000)
+    }
+  </script>
+</head>
+
+<body>
+  <main>
+    <h1>JS Popover</h1>
+    <div class="example">
+      <button type="button" onclick="openPop()">
+        Toggle Content
+      </button>
+      <div id="my-popover" class="popover" popover>
+        All you need is love. But a little chocolate now and then doesn't hurt.
+      </div>
+    </div>
+  </main>
+  <nav aria-label="Main Nav">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/examples/hover.html">Hover</a></li>
+      <li><a href="/examples/popover.html">Popover</a></li>
+      <li><a href="/examples/popover-js.html">JS Popover</a></li>
+      <li><a href="/examples/mix.html">Mix</a></li>
+      <li><a href="/examples/accessibility-options.html">Accessibility Options</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>

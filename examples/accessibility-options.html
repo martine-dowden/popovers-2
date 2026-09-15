@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Demo: Accessibility Options</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../global.styles.css" rel="stylesheet">
+  <style>
+    main {
+      display: block;
+    }
+  </style>
+  <script>
+    function openPop() {
+      console.log('open')
+      const pop = document.getElementById('my-popover-2')
+      pop.showPopover()
+      setTimeout(() => {
+        pop.hidePopover()
+      }, 4000)
+    }
+  </script>
+</head>
+
+<body>
+
+  <main>
+    <h1>Accessibility Options</h1>
+    <ul class="button-list">
+      <li>
+        <button type="button" popovertarget="info">Auto Popover</button>
+      </li>
+      <li>
+        <button type="button" onclick="openPop()">
+          Open via JS
+        </button>
+      </li>
+    </ul>
+
+    <div id="info-hint" popover="hint">More Info</div>
+
+    <div id="info" popover tabindex="0">
+      <h3>About Mice</h3>
+      <p>The very first computer mouse was made of wood...</p>
+      <div class="actions">
+        <button type="button" popovertarget="info" popovertargetaction="hide">
+          OK
+        </button>
+      </div>
+    </div>
+    <div id="my-popover-2" popover role="alert">
+      <h3>JS Magic</h3>
+      <p>I was opened programmatically and also auto closed</p>
+    </div>
+  </main>
+  <nav aria-label="Main Nav">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/examples/hover.html">Hover</a></li>
+      <li><a href="/examples/popover.html">Popover</a></li>
+      <li><a href="/examples/popover-js.html">JS Popover</a></li>
+      <li><a href="/examples/mix.html">Mix</a></li>
+      <li><a href="/examples/accessibility-options.html">Accessibility Options</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>

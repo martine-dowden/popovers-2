@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Demo: Hover</title>
+    <link href="../global.styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .has-tooltip {
+        position: relative;
+      }
+      .has-tooltip:where(:hover, :focus)::after {
+        content: 'Save Document';
+        position: absolute;
+        text-wrap: nowrap;
+        left: 50%;
+        bottom: -.5lh;
+        transform: translateX(-50%);
+        font-size: .75em;
+        background: #146b8c;
+        color: white;
+        padding: 0 8px;
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <main>
+    <body>
+      <h1>Demo: Hover</h1>
+      <div class="example">
+        <button class="has-tooltip">
+          <img src="../img/save.svg" alt="save">
+        </button>
+      </div>
+    </main>
+    <nav aria-label="Main Nav">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/examples/hover.html">Hover</a></li>
+        <li><a href="/examples/popover.html">Popover</a></li>
+        <li><a href="/examples/popover-js.html">JS Popover</a></li>
+        <li><a href="/examples/mix.html">Mix</a></li>
+        <li><a href="/examples/accessibility-options.html">Accessibility Options</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

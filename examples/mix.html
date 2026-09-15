@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Demo: Mix</title>
+  <link href="../global.styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <main>
+    <h1>Mix</h1>
+    
+    <ul class="button-list">
+      <li>
+        <button type="button" interestfor="info-hint">Interest For</button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info">Auto Popover</button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-2">
+          Manual Popover
+        </button>
+      </li>
+      <li>
+        <button type="button" interestfor="info-hint">Another Interest For</button>
+      </li>
+    </ul>
+
+    <div id="info-hint" popover="hint">More Info</div>
+
+    <div id="info" popover="auto">
+      <h3>About Mice</h3>
+      <p>The very first computer mouse was made of wood...</p>
+      <div class="actions">
+        <button type="button" popovertarget="info" popovertargetaction="hide">
+          OK
+        </button>
+      </div>
+    </div>
+    <div id="info-2" popover="manual">
+      <h3>About Mice</h3>
+      <p>The very first computer mouse was made of wood...</p>
+      <div class="actions">
+        <button type="button" popovertarget="info-2" popovertargetaction="hide">
+          OK
+        </button>
+      </div>
+    </div>
+  </main>
+  <nav aria-label="Main Nav">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/examples/hover.html">Hover</a></li>
+      <li><a href="/examples/popover.html">Popover</a></li>
+      <li><a href="/examples/popover-js.html">JS Popover</a></li>
+      <li><a href="/examples/mix.html">Mix</a></li>
+      <li><a href="/examples/accessibility-options.html">Accessibility Options</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>

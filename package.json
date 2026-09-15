@@ -1,0 +1,16 @@
+{
+  "name": "popovers-2-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx live-server --port=8080 --open=./index.html"
+  },
+  "keywords": [ "popovers", "web dev" ],
+  "author": "Martine Dowden",
+  "license": "ISC",
+  "packageManager": "pnpm@10.29.2",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
